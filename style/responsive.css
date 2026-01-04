@@ -1,0 +1,564 @@
+/* responsive.css - Mobile First Approach */
+
+/* Tablet and below */
+@media screen and (max-width: 1024px) {
+    .navcontainer {
+        width: 260px;
+    }
+
+    .nav {
+        width: 260px;
+    }
+
+    .main {
+        padding: 24px;
+    }
+
+    .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .report-container {
+        border-radius: 16px;
+    }
+
+    .report-header {
+        padding: 20px 24px;
+    }
+
+    .recent-Articles {
+        font-size: 22px;
+    }
+}
+
+/* Mobile Landscape and below */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0 16px;
+        height: 64px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .main-container {
+        top: 64px;
+    }
+
+    .main {
+        height: calc(100vh - 64px);
+        padding: 20px 16px;
+    }
+
+    .navcontainer {
+        width: 100%;
+        position: fixed;
+        top: 64px;
+        left: -100%;
+        height: calc(100vh - 64px);
+        z-index: 1000;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: var(--background-color2);
+    }
+
+    .navcontainer.active {
+        left: 0;
+    }
+
+    .nav {
+        width: 100%;
+        max-width: 320px;
+        position: relative;
+        min-height: 100%;
+        box-shadow: var(--shadow-lg);
+        border-right: none;
+    }
+
+    .nav-option {
+        padding: 0 20px;
+        min-height: 52px;
+        gap: 16px;
+    }
+
+    .nav-option h3 {
+        font-size: 15px;
+    }
+
+    .nav-img {
+        height: 20px;
+        width: 20px;
+    }
+
+    .nav-upper-options {
+        padding: 16px 0;
+        gap: 4px;
+    }
+
+    .option1 {
+        margin: 4px 12px;
+    }
+
+    .searchbar {
+        display: none;
+    }
+
+    .searchbar2 {
+        display: flex;
+        width: 100%;
+        margin: 0 0 24px 0;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .searchbar2 input {
+        width: 100%;
+        max-width: 400px;
+        height: 48px;
+        border-radius: 12px 0 0 12px;
+        background-color: var(--background-color3);
+        padding: 0 20px;
+        font-size: 15px;
+        border: 2px solid var(--border-color);
+        outline: none;
+        transition: all 0.3s ease;
+        color: var(--text-primary);
+    }
+
+    .searchbar2 input:focus {
+        border-color: var(--primary-color);
+        background-color: var(--background-color1);
+    }
+
+    .searchbar2 .searchbtn {
+        height: 48px;
+        border-radius: 0 12px 12px 0;
+    }
+
+    .box-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .box {
+        width: 100%;
+        min-width: unset;
+        height: 120px;
+        padding: 20px;
+    }
+
+    .box img {
+        height: 48px;
+        width: 48px;
+    }
+
+    .topic-heading {
+        font-size: 28px;
+    }
+
+    .topic {
+        font-size: 13px;
+    }
+
+    .report-container {
+        border-radius: 16px;
+        margin: 0;
+    }
+
+    .report-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .recent-Articles {
+        font-size: 20px;
+    }
+
+    .view {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .report-body {
+        padding: 16px;
+    }
+
+    .report-topic-heading,
+    .item1 {
+        min-width: 600px;
+        gap: 16px;
+    }
+
+    .t-op {
+        font-size: 12px;
+    }
+
+    .t-op-nextlvl {
+        font-size: 14px;
+    }
+
+    .label-tag {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+
+    .message {
+        gap: 12px;
+    }
+
+    .dp {
+        height: 40px;
+        width: 40px;
+    }
+
+    .icn {
+        height: 22px;
+        width: 22px;
+    }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0 12px;
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .main-container {
+        top: 60px;
+    }
+
+    .main {
+        height: calc(100vh - 60px);
+        padding: 16px 12px;
+    }
+
+    .navcontainer {
+        top: 60px;
+        height: calc(100vh - 60px);
+    }
+
+    .menuicn {
+        padding: 6px;
+    }
+
+    .icn {
+        height: 20px;
+        width: 20px;
+    }
+
+    .message {
+        gap: 8px;
+    }
+
+    .dp {
+        height: 36px;
+        width: 36px;
+    }
+
+    .circle {
+        height: 6px;
+        width: 6px;
+        left: 16px;
+        top: 10px;
+    }
+
+    .logosec {
+        gap: 12px;
+    }
+
+    .nav {
+        max-width: 280px;
+        padding: 16px 0;
+    }
+
+    .nav-option {
+        padding: 0 16px;
+        min-height: 48px;
+        gap: 12px;
+    }
+
+    .nav-option h3 {
+        font-size: 14px;
+    }
+
+    .nav-img {
+        height: 18px;
+        width: 18px;
+    }
+
+    .nav-upper-options {
+        padding: 12px 0;
+    }
+
+    .option1 {
+        margin: 4px 8px;
+    }
+
+    .searchbar2 {
+        margin-bottom: 20px;
+    }
+
+    .searchbar2 input {
+        height: 44px;
+        font-size: 14px;
+        padding: 0 16px;
+    }
+
+    .searchbar2 .searchbtn {
+        height: 44px;
+        width: 48px;
+    }
+
+    .box {
+        height: 110px;
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .box img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .topic-heading {
+        font-size: 24px;
+    }
+
+    .topic {
+        font-size: 12px;
+    }
+
+    .report-header {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .recent-Articles {
+        font-size: 18px;
+    }
+
+    .view {
+        height: 36px;
+        font-size: 13px;
+        padding: 0 16px;
+        max-width: 150px;
+    }
+
+    .report-body {
+        padding: 12px;
+    }
+
+    .report-topic-heading,
+    .item1 {
+        min-width: 500px;
+        gap: 12px;
+        padding: 16px 0;
+    }
+
+    .t-op {
+        font-size: 11px;
+    }
+
+    .t-op-nextlvl {
+        font-size: 13px;
+    }
+
+    .label-tag {
+        font-size: 11px;
+        padding: 4px 10px;
+        border-radius: 16px;
+    }
+
+    .items {
+        min-width: 500px;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 360px) {
+    header {
+        padding: 0 10px;
+        height: 56px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .main-container {
+        top: 56px;
+    }
+
+    .main {
+        height: calc(100vh - 56px);
+        padding: 12px 10px;
+    }
+
+    .navcontainer {
+        top: 56px;
+        height: calc(100vh - 56px);
+    }
+
+    .nav {
+        max-width: 260px;
+    }
+
+    .nav-option {
+        padding: 0 12px;
+        min-height: 44px;
+    }
+
+    .nav-option h3 {
+        font-size: 13px;
+    }
+
+    .searchbar2 input {
+        font-size: 13px;
+        padding: 0 12px;
+        height: 40px;
+    }
+
+    .searchbar2 .searchbtn {
+        height: 40px;
+        width: 44px;
+    }
+
+    .box {
+        height: 100px;
+        padding: 12px;
+    }
+
+    .box img {
+        height: 36px;
+        width: 36px;
+    }
+
+    .topic-heading {
+        font-size: 22px;
+    }
+
+    .topic {
+        font-size: 11px;
+    }
+
+    .report-header {
+        padding: 12px;
+    }
+
+    .recent-Articles {
+        font-size: 16px;
+    }
+
+    .view {
+        height: 32px;
+        font-size: 12px;
+        padding: 0 12px;
+        max-width: 120px;
+    }
+
+    .report-topic-heading,
+    .item1 {
+        min-width: 450px;
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    .t-op {
+        font-size: 10px;
+    }
+
+    .t-op-nextlvl {
+        font-size: 12px;
+    }
+
+    .label-tag {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+
+    .items {
+        min-width: 450px;
+    }
+
+    .dp {
+        height: 32px;
+        width: 32px;
+    }
+
+    .message {
+        gap: 6px;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .nav-option:hover {
+        background-color: transparent;
+        border-left-color: transparent;
+    }
+
+    .nav-option:active {
+        background-color: var(--background-color3);
+        border-left-color: var(--primary-color);
+    }
+
+    .box:hover {
+        transform: none;
+    }
+
+    .box:active {
+        transform: scale(0.98);
+    }
+
+    .view:hover {
+        transform: none;
+    }
+
+    .view:active {
+        transform: scale(0.95);
+    }
+
+    /* Larger touch targets */
+    .nav-option {
+        min-height: 56px;
+    }
+
+    .menuicn {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .view {
+        min-height: 44px;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .main {
+        padding: 16px;
+    }
+
+    .box-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .box {
+        height: 100px;
+    }
+
+    .topic-heading {
+        font-size: 20px;
+    }
+}
