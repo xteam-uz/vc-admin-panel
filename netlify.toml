@@ -1,0 +1,10 @@
+[build]
+  # Bu oddiy HTML loyihasi, build kerak emas
+  # Publish directory - asosiy fayllar root papkada
+  publish = "."
+
+# SPA routing uchun (agar kerak bo'lsa)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
